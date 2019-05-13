@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <button class="createBox">Criar caixa</button>
+    </div>
+    <!-- 1º exercício
+Crie um botão que ao ser clicado cria um novo elemento em tela com a forma de
+um quadrado vermelho com 100px de altura e largura.
+Sempre que o botão for clicado um novo quadrado deve aparecer na tela.
+-->
+
+    <script>
+      var btnBox = document.querySelector(".createBox");
+      var containerElement = document.querySelector(".app");
+      btnBox.onclick = () => {
+        var box = document.createElement("div");
+
+        box.style.backgroundColor = "#f00";
+        box.style.width = "100px";
+        box.style.height = "100px";
+        box.style.margin = "5px";
+        containerElement.appendChild(box);
+      };
+    </script>
+  </body>
+</html>

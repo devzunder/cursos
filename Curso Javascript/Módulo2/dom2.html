@@ -1,0 +1,28 @@
+<html>
+  <head> </head>
+  <body>
+    <div id="app">
+      <a href="www.google.com">Acessar o google</a>
+      <input type="text" id="nome" />
+    </div>
+    <script>
+      //criar elemento na DOM
+      var linkElement = document.createElement("a");
+      //inserir atributo no elemento da DOM
+      linkElement.setAttribute("href", "www.google.com");
+
+      //criar o texto do elemento
+      var textElement = document.createTextNode("Acessar o google");
+      //anexar o elemento texto no elemento
+      linkElement.appendChild(textElement);
+
+      //colocar o elemento de link dentro do APP na DOM
+      var containerElement = document.querySelector("#app");
+      containerElement.appendChild(linkElement);
+
+      //remover um elemento da DOM
+      var inputElement = document.querySelector("#nome");
+      containerElement.removeChild(inputElement);
+    </script>
+  </body>
+</html>

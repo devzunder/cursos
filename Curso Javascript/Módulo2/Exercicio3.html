@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="app">
+      <ul id="nomes"></ul>
+    </div>
+    <!-- 3º exercício
+A partir do seguinte vetor:
+var nomes = ["Diego", "Gabriel", "Lucas"];
+Preencha uma lista (<ul>) no HTML com os itens da seguinte forma:
+● Diego
+● Gabriel
+● Lucas
+-->
+
+    <script>
+      var nomes = ["Diego", "Gabriel", "Lucas"];
+      var list = document.querySelector("#nomes");
+      var item, textElement;
+      for (i = 0; i < nomes.length; i++) {
+        item = document.createElement("li");
+        textElement = document.createTextNode(nomes[i]);
+        console.log(textElement);
+        item.appendChild(textElement);
+        list.appendChild(item);
+      }
+    </script>
+  </body>
+</html>

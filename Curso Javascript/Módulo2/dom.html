@@ -1,0 +1,19 @@
+<!--Manipulação de DOM-->
+<html>
+  <head> </head>
+  <body>
+    <div class="app">
+      <input type="text" class="name" name="nome" />
+      <button class="botao">Me aperte</button>
+    </div>
+    <script>
+      var textElement = document.querySelector("input[name = nome]");
+      var btnElement = document.querySelector("button.botao");
+
+      btnElement.onclick = function() {
+        var text = textElement.value;
+        alert(text);
+      };
+    </script>
+  </body>
+</html>
